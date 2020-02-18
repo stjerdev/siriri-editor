@@ -1,0 +1,46 @@
+{
+  "name": "siriri-editor",
+  "version": "0.0.1",
+  "description": "Editor de texto contextual, especialmente diseñado para editar textos de expedientes judiciales ",
+  "repository": "stjerdev/siriri-editor",
+  "main": "dist/index.js",
+  "scripts": {
+    "start:dev": "cross-env webpack-dev-server --mode development",
+    "watch": "cross-env NODE_ENV=development rollup -c -w",
+    "build": "cross-env NODE_ENV=production rollup -c",
+    "test": "mocha -r ts-node/register test/setup.ts test/*.test.*"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "mui-rte": "github:stjerdev/mui-rte#develop"
+  },
+  "peerDependencies": {
+    "@material-ui/core": ">=4.1.0 <5",
+    "@material-ui/icons": ">=4.1.0 <5",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
+  },
+  "devDependencies": {
+    "@material-ui/core": ">=4.1.0 <5",
+    "@material-ui/icons": ">=4.1.0 <5",
+    "@rollup/plugin-commonjs": "^11.0.2",
+    "@rollup/plugin-typescript": "^3.0.0",
+    "@types/node": "^13.7.1",
+    "@types/react": "^16.9.19",
+    "@types/react-dom": "^16.9.5",
+    "awesome-typescript-loader": "^5.2.1",
+    "cross-env": "^7.0.0",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-json-editor-viewer": "^1.0.7",
+    "rollup": "^1.31.1",
+    "rollup-plugin-uglify": "^6.0.4",
+    "source-map-loader": "^0.2.4",
+    "typescript": "^3.7.5",
+    "webpack": "^4.41.6",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.10.3"
+  }
+}
