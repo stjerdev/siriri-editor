@@ -1,9 +1,9 @@
-import React from "react";
-import MUIRichTextEditor from "mui-rte";
+import React from 'react';
+import MUIRichTextEditor from 'mui-rte';
 const SiririEditor = () => {
     return (
-        <MUIRichTextEditor label="Prueba editor..." />
-    )
-}
+        <MUIRichTextEditor label='Prueba editor...' />
+    );
+};
 
 export default SiririEditor;

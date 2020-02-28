@@ -8,7 +8,9 @@
     "start:dev": "cross-env webpack-dev-server --mode development",
     "watch": "cross-env NODE_ENV=development rollup -c -w",
     "build": "cross-env NODE_ENV=production rollup -c",
-    "test": "mocha -r ts-node/register test/setup.ts test/*.test.*"
+    "test2": "mocha -r ts-node/register test/setup.ts test/*.test.*",
+    "test": "jest",
+    "test:watch": "jest --watch"
   },
   "keywords": [],
   "author": "",
@@ -23,6 +25,8 @@
     "react-dom": "^16.8.6"
   },
   "devDependencies": {
+    "@babel/preset-env": "^7.8.4",
+    "@babel/preset-react": "^7.8.3",
     "@material-ui/core": ">=4.1.0 <5",
     "@material-ui/icons": ">=4.1.0 <5",
     "@rollup/plugin-commonjs": "^11.0.2",
@@ -30,17 +34,41 @@
     "@types/node": "^13.7.1",
     "@types/react": "^16.9.19",
     "@types/react-dom": "^16.9.5",
+    "@types/react-test-renderer": "^16.9.2",
     "awesome-typescript-loader": "^5.2.1",
     "cross-env": "^7.0.0",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-json-editor-viewer": "^1.0.7",
+    "react-test-renderer": "^16.12.0",
     "rollup": "^1.31.1",
     "rollup-plugin-uglify": "^6.0.4",
     "source-map-loader": "^0.2.4",
     "typescript": "^3.7.5",
     "webpack": "^4.41.6",
     "webpack-cli": "^3.3.11",
-    "webpack-dev-server": "^3.10.3"
+    "webpack-dev-server": "^3.10.3",
+    "@types/jest": "^23.3.13",
+    "jest": "^23.6.0",
+    "@types/supertest": "^2.0.7",
+    "prettier": "^1.15.3",
+    "supertest": "^3.4.1",
+    "ts-jest": "^23.10.5",
+    "ts-node": "^7.0.1",
+    "tslint": "5.12.1"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "js",
+      "json",
+      "ts"
+    ],
+    "rootDir": "src",
+    "testRegex": ".spec.ts$",
+    "transform": {
+      "^.+\\.(t|j)s$": "ts-jest"
+    },
+    "coverageDirectory": "../coverage",
+    "testEnvironment": "node"
   }
 }

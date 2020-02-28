@@ -50,5 +50,7 @@ module.exports = {
         port: 9000,
         watchContentBase: true,
         host: "0.0.0.0"
-    }
+    },
+    
+    presets: ['@babel/preset-env', '@babel/preset-react'],
 };
