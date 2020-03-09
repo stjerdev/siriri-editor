@@ -2,7 +2,7 @@ const path = require('path');
 const webpack = require("webpack");
 
 module.exports = {
-    name: "ejemplo-siriri-editor",
+    name: "mui-rte-example",
     mode: "development",
     node: {
         __dirname: false,
@@ -50,7 +50,5 @@ module.exports = {
         port: 9000,
         watchContentBase: true,
         host: "0.0.0.0"
-    },
-    
-    presets: ['@babel/preset-env', '@babel/preset-react'],
+    }
 };

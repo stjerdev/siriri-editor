@@ -1,24 +1,25 @@
-import React from "react";
-import { JSONEditor } from "react-json-editor-viewer";
-import { Grid, Typography } from "@material-ui/core";
+import React from 'react';
+// @ts-ignore
+import { JSONEditor } from 'react-json-editor-viewer';
+import { Grid, Typography } from '@material-ui/core';
 
 const expedienteEjemplo = {
-    actora: "JUAN PEREZ",
-    demandada: "LEX CORP SA",
+    actora: 'JUAN PEREZ',
+    demandada: 'LEX CORP SA',
     justiciables: [
       {
-        apellidos: "PEREZ",
-        nombres: "JUAN",
-        caracter: "ACTORA",
+        apellidos: 'PEREZ',
+        nombres: 'JUAN',
+        caracter: 'ACTORA',
         abogados: {
-          nombre_completo: "GOLDMAN, SALUL"
+          nombre_completo: 'GOLDMAN, SALUL'
         }
       },
       {
-        apellidos: "LEX CORP SA",
-        caracter: "DEMANDADA",
+        apellidos: 'LEX CORP SA',
+        caracter: 'DEMANDADA',
         abogados: {
-          nombre_completo: "PEREZ, JUAN"
+          nombre_completo: 'PEREZ, JUAN'
         }
       }
     ]
@@ -26,9 +27,9 @@ const expedienteEjemplo = {
 
 const EditorExpediente = () => {
   return (
-    <Grid container direction="column" style={{ padding: "2em" }}>
+    <Grid container direction='column' style={{ padding: '2em' }}>
       <Grid item>
-        <Typography variant="h3"> Expediente</Typography>
+        <Typography variant='h3'> Expediente</Typography>
       </Grid>
       <Grid item>
         <JSONEditor

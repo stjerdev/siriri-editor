@@ -1,1 +1,1 @@
-export { default } from "./src/SiririEditor";
+export { default } from './src/SiririEditor';

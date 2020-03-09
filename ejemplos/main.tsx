@@ -1,8 +1,8 @@
-import React from "react";
-import * as ReactDOM from "react-dom";
-import Grid from "@material-ui/core/Grid";
-import SiririEditor from "../";
-import EditorExpediente from "./EditorExpediente";
+import React from 'react';
+import * as ReactDOM from 'react-dom';
+import Grid from '@material-ui/core/Grid';
+import SiririEditor from '../';
+import EditorExpediente from './EditorExpediente';
 const App = () => {
   return (
     <Grid container>
@@ -16,4 +16,4 @@ const App = () => {
   );
 };
 
-ReactDOM.render(<App />, document.getElementById("root"));
+ReactDOM.render(<App />, document.getElementById('root'));

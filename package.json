@@ -8,16 +8,11 @@
     "start:dev": "cross-env webpack-dev-server --mode development",
     "watch": "cross-env NODE_ENV=development rollup -c -w",
     "build": "cross-env NODE_ENV=production rollup -c",
-    "test2": "mocha -r ts-node/register test/setup.ts test/*.test.*",
-    "test": "jest",
-    "test:watch": "jest --watch"
+    "test": "mocha -r ts-node/register src/test/setup.ts src/test/*.test.*"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "mui-rte": "github:stjerdev/mui-rte#develop"
-  },
   "peerDependencies": {
     "@material-ui/core": ">=4.1.0 <5",
     "@material-ui/icons": ">=4.1.0 <5",
@@ -31,44 +26,45 @@
     "@material-ui/icons": ">=4.1.0 <5",
     "@rollup/plugin-commonjs": "^11.0.2",
     "@rollup/plugin-typescript": "^3.0.0",
+    "@types/chai": "^4.2.9",
+    "@types/dateformat": "^3.0.1",
+    "@types/enzyme": "^3.10.5",
+    "@types/enzyme-adapter-react-16": "^1.0.6",
+    "@types/mocha": "^7.0.2",
     "@types/node": "^13.7.1",
     "@types/react": "^16.9.19",
     "@types/react-dom": "^16.9.5",
     "@types/react-test-renderer": "^16.9.2",
+    "@types/sinon": "^7.5.2",
+    "@types/supertest": "^2.0.8",
     "awesome-typescript-loader": "^5.2.1",
+    "chai": "^4.2.0",
     "cross-env": "^7.0.0",
-    "react": "^16.12.0",
-    "react-dom": "^16.12.0",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.2",
+    "jsdom": "^15.1.1",
+    "jsdom-global": "^3.0.2",
+    "mocha": "^7.1.0",
+    "prettier": "^1.19.1",
+    "react": "^16.13.0",
+    "react-dom": "^16.13.0",
     "react-json-editor-viewer": "^1.0.7",
-    "react-test-renderer": "^16.12.0",
+    "react-test-renderer": "^16.13.0",
     "rollup": "^1.31.1",
     "rollup-plugin-uglify": "^6.0.4",
+    "sinon": "^9.0.0",
     "source-map-loader": "^0.2.4",
-    "typescript": "^3.7.5",
-    "webpack": "^4.41.6",
+    "supertest": "^4.0.2",
+    "ts-node": "^8.6.2",
+    "tslint": "6.0.0",
+    "typescript": "^3.8.3",
+    "webpack": "^4.42.0",
     "webpack-cli": "^3.3.11",
-    "webpack-dev-server": "^3.10.3",
-    "@types/jest": "^23.3.13",
-    "jest": "^23.6.0",
-    "@types/supertest": "^2.0.7",
-    "prettier": "^1.15.3",
-    "supertest": "^3.4.1",
-    "ts-jest": "^23.10.5",
-    "ts-node": "^7.0.1",
-    "tslint": "5.12.1"
+    "webpack-dev-server": "^3.10.3"
   },
-  "jest": {
-    "moduleFileExtensions": [
-      "js",
-      "json",
-      "ts"
-    ],
-    "rootDir": "src",
-    "testRegex": ".spec.ts$",
-    "transform": {
-      "^.+\\.(t|j)s$": "ts-jest"
-    },
-    "coverageDirectory": "../coverage",
-    "testEnvironment": "node"
+  "dependencies": {
+    "dateformat": "^3.0.3",
+    "markdown-draft-js": "^2.2.0",
+    "mui-rte": "github:stjerdev/mui-rte#develop"
   }
 }
