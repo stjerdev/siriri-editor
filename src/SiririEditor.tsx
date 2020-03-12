@@ -15,7 +15,7 @@ type TSiririProps = {
     onSave?: () => void
 }
 
-const CallbackComponenFecha = (props:any) => {
+const CallbackComponenFecha = (props: any) => {
     // tslint:disable-next-line:no-console
     return (
         <IconButton aria-label='fecha' onMouseDown={props.onMouseDown}>
@@ -26,8 +26,10 @@ const CallbackComponenFecha = (props:any) => {
 const comandos = [
     {
         nombre: 'insertar-fecha',
+        keyBinding: 70, // F
         toolbarComponente: CallbackComponenFecha,
         call: (editorState: EditorState) => {
+            console.log('##########################insertar-fecha')
             // tslint:disable-next-line:no-console
             const fechaActual = dateFormatter(Date.now())
             const currentContent = editorState.getCurrentContent()
@@ -54,6 +56,8 @@ const SiririEditor = (props: TSiririProps) => {
     const { onSave } = props
 
     return (
+        <div>
+        <input onKeyPress={() => console.log('se llamo al keydown')}></input>
         <MUIRichTextEditor onSave={onSave}
             controls={[
                 'bold',
@@ -64,18 +68,32 @@ const SiririEditor = (props: TSiririProps) => {
                 'save',
                 'insertar-fecha'
             ]}
+            keyCommands={
+                comandos
+                .filter(comando => comando.keyBinding)
+                .map(comando => (
+                {
+                    key: comando.keyBinding,
+                    name: comando.nombre,
+                    callback: comando.call
+
+                }
+            ))}
             customControls={
-                comandos.map(comando => (
-                    {
-                        name: comando.nombre,
-                        component: comando.toolbarComponente,
-                        type: 'callback',
-                        onClick: comando.call,
-                    }
-                ))
+                comandos
+                    .filter(comando => comando.toolbarComponente)
+                    .map(comando => (
+                        {
+                            name: comando.nombre,
+                            component: comando.toolbarComponente,
+                            type: 'callback',
+                            onClick: comando.call,
+                        }
+                    ))
                 // [
-            // ]
-        } />
+                // ]
+            } />
+            </div>
     );
 };
 
